@@ -24,7 +24,7 @@ This saves your modified tracked files and staged changes, then reverts the work
 
 **Stash with a descriptive message:**
 ```bash
-git stash save "WIP: implementing user authentication"
+git stash push -m "WIP: implementing user authentication"
 ```
 
 **List all stashes:**
@@ -91,7 +91,7 @@ $ echo "new feature code" >> feature.js
 $ git add feature.js
 
 # Urgent bug fix needed on main branch
-$ git stash save "WIP: new feature implementation"
+$ git stash push -m "WIP: new feature implementation"
 
 # Switch to main branch and fix the bug
 $ git checkout main
@@ -405,7 +405,7 @@ $ git reset --hard <commit-hash-from-reflog>
 
 ## Best Practices
 
-1. **git stash**: Use descriptive messages with `git stash save` to easily identify stashed changes later.
+1. **git stash**: Use descriptive messages with `git stash push -m` to easily identify stashed changes later.
 
 2. **git cherry-pick**: Use for specific commits that need to be applied to other branches. Avoid cherry-picking too many commits; consider merging instead.
 
